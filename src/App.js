@@ -34,6 +34,7 @@ function App() {
       setError("No lyrics found for the given artist and song", e);
     } finally {
       setLoading(false);
+      setError("");
     }
   };
 
@@ -71,7 +72,7 @@ function App() {
       <hr />
       {lyrics && <pre className="text-black text-center mt-6 mb-10">{lyrics}</pre>}
       {loading && <p className="text-center mt-3 mb-3">Loading...</p>}
-      {error && <p className="text-red-600 text-center mt-3 ">{error}</p>}
+      {error && <p className="text-red-600 text-center mt-3 mb-3 ">{error}</p>}
     </div>
   );
 }
